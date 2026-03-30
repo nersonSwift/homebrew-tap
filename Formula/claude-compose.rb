@@ -2,8 +2,8 @@
 class ClaudeCompose < Formula
   desc "Multi-project workspace launcher for Claude Code"
   homepage "https://github.com/nersonSwift/claude-compose"
-  url "https://github.com/nersonSwift/claude-compose/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "ed57a5a25ce789e9d39436e45f1f821d7b6d3369e9b09192dad102dfc1ec2cea"  # Updated by release workflow
+  url "https://github.com/nersonSwift/claude-compose/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "59b39a4e50b714601e278847eb59dd6a5ebe781e75dc61feb0de130c3f20e43e"  # Updated by release workflow
   license "MIT"
 
   depends_on "jq"
@@ -11,6 +11,7 @@ class ClaudeCompose < Formula
   def install
     system "make"
     bin.install "claude-compose"
+    bin.install "claude-compose-wrapper"
   end
 
   test do
